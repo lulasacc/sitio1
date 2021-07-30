@@ -1,0 +1,300 @@
+/* CONTACTO */
+
+$fontHover: #97b7cc;
+
+#informacionContacto {
+
+    h1{
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 45px;
+
+    }
+
+    .infoContacto{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 100px;
+        margin-top: 40px;
+        height: 150px;
+        background: linear-gradient(315deg, hsla(206, 65%, 45%, 1) 13%, hsla(173, 56%, 45%, 1) 44%, hsla(214, 75%, 56%, 1) 80%, hsla(206, 65%, 45%, 1) 100%);   
+        background-size: 600% 100%;
+        color: white;
+        animation-name: gradient;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+
+        .contactoPartes{
+            display: flex;
+
+            h2{
+                margin:0px 10px 0 20px;
+                align-content: center;
+            }
+    
+            p{
+                margin:5px 40px 0 5px;
+            }
+        }
+
+       
+    }
+}
+
+/* desktop + */
+@media screen and (min-width: 1024px) and (max-width: 1200px){
+
+    #informacionContacto {
+
+        .infoContacto{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+
+
+            .contactoPartes{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                h2{
+                    margin:0px 0px 0 0px;
+                    align-content: center;
+                }
+        
+                p{
+                    margin:0px 0px 0 0px;
+                }
+            }
+        }
+
+    }
+
+}
+
+/* desktop */
+@media screen and (min-width: 769px) and (max-width: 1023px){
+
+    #informacionContacto {
+
+        .infoContacto{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+
+
+            .contactoPartes{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                h2{
+                    margin:0px 0px 0 0px;
+                    align-content: center;
+                }
+        
+                p{
+                    margin:0px 0px 0 0px;
+                }
+            }
+        }
+
+    }
+
+}
+
+/* tablet */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+
+    #informacionContacto {
+
+        .infoContacto{
+            display: block;
+            height: 250px;
+            padding-top: 15px;
+
+            .contactoPartes{
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            
+                h2{
+                    margin:0px 0px 0 0px;
+                    align-content: center;
+                }
+        
+                p{
+                    margin:0px 0px 0 0px;
+                }
+            }
+        }
+
+    }
+}
+
+/* smartphone */
+@media screen and (max-width: 480px){
+
+    #informacionContacto {
+
+        .infoContacto{
+            display: block;
+            height: 250px;
+            padding-top: 15px;
+
+            .contactoPartes{
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            
+                h2{
+                    margin:0px 0px 0 0px;
+                    align-content: center;
+                }
+        
+                p{
+                    margin:0px 0px 0 0px;
+                }
+            }
+        }
+
+    }
+}
+
+#contacto{
+    display: flex;
+    justify-content: space-evenly;
+
+    .formulario{
+
+        form{
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+
+            label{
+                font-size: 14px;
+            }
+
+            input{
+                background-color: white;
+                border: 0;
+                width: 350px;
+                border-bottom: solid 1px black;
+                margin-bottom: 5px;
+                height: 30px;
+            }
+
+            h4{
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
+
+            .checkBox1 input{
+                width: auto; 
+                height: auto;
+            }
+
+            textarea{
+                width: 400px;
+            }
+
+            .botones input{
+                margin-top: 20px;
+                border: 0;
+                background-color:black ;
+                width: 400px;
+                padding: 5px 10px;
+                color: white;
+
+                &:hover{
+                    background-color:rgba(84, 175, 132, 0.87) ;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+
+/* tablet */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+
+    #contacto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+/* smartphone */
+@media screen and (max-width: 480px){
+
+    #contacto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .formulario{
+            width: 90%;
+
+            form{
+
+                textarea{
+                    width: 350px;
+                }
+
+                .botones{
+                
+                    input{
+                        margin-top: 20px;
+                        border: 0;
+                        background-color:black ;
+                        width: 350px;
+                        padding: 5px 10px;
+                        color: white;
+                    }
+                }
+            }
+
+        }
+    }
+
+    #suscribe{
+
+        width: 100%;
+    
+        h5{
+            text-align: center;
+            width:95%;
+        }
+
+        .input-group{
+            width: 70%;
+        }
+    }
+}
+
+
+/* KEYFRAMES */
+@keyframes gradient{
+    0%{
+        background-position: 0%; }
+
+    100%{
+        background-position: 100%;
+    }
+}

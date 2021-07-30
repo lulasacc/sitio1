@@ -1,0 +1,55 @@
+.formularioUsuarioR{
+    margin: 0 auto 230px;
+
+}
+
+.formularioUsuarioR h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.formularioUsuarioR p{
+    text-align: center;
+}
+.formularioUsuarioR p a{
+    color: rgba(84, 175, 132, 0.87);
+    text-decoration: none;
+}
+.formularioUsuarioR p a:hover{
+    text-decoration: underline;
+}
+
+.formularioUsuarioR form{
+    display: flex;
+    flex-direction: column;
+    margin: 50px ;
+    align-items: center;
+
+}
+
+.formularioUsuarioR input{
+    background-color: white;
+    border: 0;
+    width: 350px;
+    border-bottom: solid 1px black;
+    margin-bottom: 25px;
+    height: 30px;
+
+}
+.formularioUsuarioR .botonEnviar {
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    padding:10px 25px;
+    height: auto;
+    top: 550px;
+    position: absolute;
+}
+
+.formularioUsuarioR .botonEnviar:hover{
+    animation-name: BotonEnviar;
+    animation-iteration-count: inherit;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    background-color: hsla(206, 65%, 45%, 1);
+
+}

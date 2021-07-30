@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+    width: 100vw;
+}
+
+body{
+    background-color: white;
+    font-family: Poppins;
+}
+
+
+@import "estiloindex.scss";
+@import "estilonosotros.scss";
+@import "estiloshop.scss";
+@import "estilocontacto.scss";
+@import "estiloiniciarsesion.scss";
+@import "estiloregistro.scss";
