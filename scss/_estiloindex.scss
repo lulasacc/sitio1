@@ -408,18 +408,26 @@ header{
                             }
                         }
                     }
-                }
-
-               
+                }  
             }
-
         }
     }
-
 }
 
 
 // FALTA ESCRIBIR EL ESTILO DEL POP OVER
+
+.popover{
+    display: block;
+}
+
+@keyframes popover{
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    }
 
 /*  carrousel   */
 #carrusel{
