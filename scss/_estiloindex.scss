@@ -586,6 +586,54 @@ header{
     }  
 }
 
+/*  carrousel Mobile  */
+#carruselMobile{
+    display: none;
+    /*margin-top: -40px;
+    margin-bottom: 70px;
+    height: 880px;
+    width: 100vw;
+
+    #sliderIndex{
+        height: auto;
+
+        .carousel-inner{
+            height: 880px;
+
+            .carousel-caption {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                p{
+                    margin-top: -500px;
+
+                    a{
+                        color:black;
+                        background-color: #ffffffb6;
+                        padding: 15px 30px;
+                        text-decoration: none;
+                        font-size: 15px;
+                        font-weight: 400;
+                        
+                    
+                    
+                        animation-name: botonInicio;
+                        animation-duration: 3s;
+                        animation-iteration-count: infinite;
+                        animation-timing-function: ease-in-out; 
+
+                        &:hover{
+                            background-color: black;
+                            color: whitesmoke;
+                        }
+                    }
+                }
+            }
+        }
+    }*/
+}
+
 
 
 #secIntermedia{
