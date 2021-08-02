@@ -394,18 +394,14 @@ header{
                         button{
                             background-color: white;
                             text-align: center;
-
-                            svg{
-                                margin-r: auto;
-                            }
                         }
 
                         a {
                             text-decoration: none;
                             color:rgb(22, 22, 22);
-                            font-size: 13px;
+                            font-size: 15px;
                             width: auto;
-                            margin-right: 10px;
+                            padding: 10px 0 ;
 
                             &:hover{
                                 color: $fontHover;
