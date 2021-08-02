@@ -371,16 +371,19 @@ header{
                     align-items: center;
                     width: 100%;
 
-                    .nav_logo img{
-                        display: none;
-                    }
+ 
 
                     li {
                         list-style-type: none;
                         text-align: center;
                         display: inline-block;
                         margin: 0 2px;
-                        padding:2px;
+                        padding: 15px 0;
+
+                        .nav_logo {
+                            display: none;
+                        
+                        }
 
                         .menu_cerrar {
                             display: flex;
@@ -394,6 +397,7 @@ header{
                         button{
                             background-color: white;
                             text-align: center;
+                            padding: 0px;
                         }
 
                         a {
@@ -401,7 +405,6 @@ header{
                             color:rgb(22, 22, 22);
                             font-size: 15px;
                             width: auto;
-                            padding: 10px 0 ;
 
                             &:hover{
                                 color: $fontHover;
