@@ -159,8 +159,9 @@ header {
           width: 25px; }
       header .menuP1 #nav {
         position: absolute;
-        top: -400%;
+        top: -1000%;
         width: 100%;
+        height: 100vh;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -177,30 +178,28 @@ header {
           justify-content: center;
           align-items: center;
           width: 100%; }
-          header .menuP1 #nav ul .nav_logo img {
+          header .menuP1 #nav ul .nav_logo {
             display: none; }
           header .menuP1 #nav ul li {
             list-style-type: none;
             text-align: center;
             display: inline-block;
-            margin: 0 2px;
-            padding: 2px; }
+            margin-bottom: 20px;
+            padding: 10px 0; }
             header .menuP1 #nav ul li .menu_cerrar {
               display: flex;
-              justify-content: flex-end; }
+              margin-top: 60px; }
               header .menuP1 #nav ul li .menu_cerrar img {
-                width: 15px; }
+                width: 30px; }
             header .menuP1 #nav ul li button {
               background-color: white;
-              text-align: center; }
+              text-align: center;
+              padding: 0px; }
             header .menuP1 #nav ul li a {
               text-decoration: none;
               color: #161616;
-              font-size: 13px;
-              width: auto;
-              margin-right: 10px; }
-              header .menuP1 #nav ul li a:hover {
-                color: #97b7cc; } }
+              font-size: 17px;
+              width: auto; } }
 
 /* SMARTPHONE */
 @media screen and (max-width: 480px) {
@@ -234,8 +233,9 @@ header {
           width: 25px; }
       header .menuP1 #nav {
         position: absolute;
-        top: -400%;
+        top: -1000%;
         width: 100%;
+        height: 100vh;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -252,30 +252,118 @@ header {
           justify-content: center;
           align-items: center;
           width: 100%; }
-          header .menuP1 #nav ul .nav_logo img {
+          header .menuP1 #nav ul .nav_logo {
             display: none; }
           header .menuP1 #nav ul li {
             list-style-type: none;
             text-align: center;
             display: inline-block;
-            margin: 0 2px;
-            padding: 2px; }
+            margin-bottom: 20px;
+            padding: 10px 0; }
             header .menuP1 #nav ul li .menu_cerrar {
               display: flex;
-              justify-content: flex-end; }
+              margin-top: 60px; }
               header .menuP1 #nav ul li .menu_cerrar img {
-                width: 15px; }
+                width: 30px; }
             header .menuP1 #nav ul li button {
               background-color: white;
-              text-align: center; }
+              text-align: center;
+              padding: 0px; }
             header .menuP1 #nav ul li a {
               text-decoration: none;
               color: #161616;
-              font-size: 13px;
-              width: auto;
-              margin-right: 10px; }
-              header .menuP1 #nav ul li a:hover {
-                color: #97b7cc; } }
+              font-size: 17px;
+              width: auto; } }
+
+/* MODAL */
+.popModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px; }
+  .popModal .popBoton {
+    z-index: 70;
+    border-radius: 5px; }
+    .popModal .popBoton .btn {
+      height: 50px;
+      animation-name: popBoton;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-duration: 4s; }
+      .popModal .popBoton .btn:hover {
+        color: black; }
+  .popModal .modal-footer button {
+    background-color: #97b7cc;
+    color: white; }
+
+@keyframes popBoton {
+  0% {
+    background-color: white; }
+  10% {
+    background-color: white; }
+  50% {
+    background-color: #97b7cc;
+    padding: 0 100px; }
+  90% {
+    background-color: white; }
+  100% {
+    background-color: white; } }
+
+/* MEDIA QUERY POPOVER */
+/* tablet */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .popModal .popBoton .btn {
+    height: 50px;
+    animation-name: popBotonTablet;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 4s; }
+    .popModal .popBoton .btn:hover {
+      color: black; }
+  @keyframes popBotonTablet {
+    0% {
+      background-color: white; }
+    10% {
+      background-color: white; }
+    50% {
+      background-color: #97b7cc;
+      padding: 0 85px; }
+    90% {
+      background-color: white; }
+    100% {
+      background-color: white; } } }
+
+/* SMARTPHONE */
+@media screen and (max-width: 480px) {
+  .popModal {
+    height: 150px;
+    margin-top: -60px; }
+    .popModal .popBoton {
+      border-radius: 0px; }
+      .popModal .popBoton .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100px;
+        animation-name: popBotonSmart;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-duration: 4s; }
+        .popModal .popBoton .btn p {
+          width: 200px;
+          margin-bottom: 0; }
+  @keyframes popBotonSmart {
+    0% {
+      background-color: white; }
+    10% {
+      background-color: white; }
+    50% {
+      background-color: #97b7cc; }
+    90% {
+      background-color: white; }
+    100% {
+      background-color: white; } } }
 
 /*  carrousel   */
 #carrusel {
@@ -364,6 +452,58 @@ header {
 @media screen and (max-width: 480px) {
   #carrusel {
     display: none; } }
+
+/*  carrousel Mobile  */
+#carruselMobile {
+  display: none;
+  /*margin-top: -40px;
+    margin-bottom: 70px;
+    height: 880px;
+    width: 100vw;
+
+    #sliderIndex{
+        height: auto;
+
+        .carousel-inner{
+            height: 880px;
+
+            .carousel-caption {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                p{
+                    margin-top: -500px;
+
+                    a{
+                        color:black;
+                        background-color: #ffffffb6;
+                        padding: 15px 30px;
+                        text-decoration: none;
+                        font-size: 15px;
+                        font-weight: 400;
+                        
+                    
+                    
+                        animation-name: botonInicio;
+                        animation-duration: 3s;
+                        animation-iteration-count: infinite;
+                        animation-timing-function: ease-in-out; 
+
+                        &:hover{
+                            background-color: black;
+                            color: whitesmoke;
+                        }
+                    }
+                }
+            }
+        }
+    }*/ }
+
+/* smartphone */
+@media screen and (max-width: 480px) {
+  #carruselMobile {
+    display: block; } }
 
 #secIntermedia {
   display: grid;
@@ -897,7 +1037,7 @@ footer {
     margin-top: 80px;
     animation-name: nosotros;
     animation-iteration-count: infinite;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-timing-function: linear; }
     .portadaNos a:hover {
       color: #ffffff; }
@@ -1071,12 +1211,6 @@ footer {
   .barraFiltros #dropdowns {
     background-color: white;
     margin-right: 20px; }
-  .barraFiltros .filter {
-    margin-right: 20px; }
-    .barraFiltros .filter a {
-      text-decoration: none;
-      color: rgba(0, 0, 0, 0.753);
-      font-weight: 500; }
 
 /* desktop */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -1095,9 +1229,19 @@ footer {
     .barraFiltros #dropdowns {
       background-color: white;
       margin-right: 0px;
-      margin-bottom: 10px; }
-    .barraFiltros .filter {
-      margin-right: 0px; } }
+      margin-bottom: 10px; } }
+
+/* smartphone */
+@media screen and (max-width: 480px) {
+  .barraFiltros {
+    display: flex;
+    flex-direction: column; }
+    .barraFiltros h1 {
+      margin-right: 0px; }
+    .barraFiltros #dropdowns {
+      background-color: white;
+      margin-right: 0px;
+      margin-bottom: 10px; } }
 
 .galeria {
   margin-top: 50px;

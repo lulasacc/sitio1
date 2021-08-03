@@ -189,8 +189,6 @@ header{
 
 /* tablet */
 @media screen and (min-width: 480px) and (max-width: 768px) {
-
-
     html{
         width: 100vw;
     }
@@ -233,8 +231,9 @@ header{
 
             #nav{
                 position: absolute;
-                top: -400%;
+                top: -1000%;
                 width: 100%;
+                height: 100vh;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -256,48 +255,43 @@ header{
                     align-items: center;
                     width: 100%;
 
-                    .nav_logo img{
+                    .nav_logo {
                         display: none;
+                    
                     }
 
                     li {
                         list-style-type: none;
                         text-align: center;
                         display: inline-block;
-                        margin: 0 2px;
-                        padding:2px;
+                        margin-bottom: 20px;
+                        padding: 10px 0;
 
                         .menu_cerrar {
                             display: flex;
-                            justify-content: flex-end;
+                            margin-top: 60px;
+                            
                             
                             img{
-                                width: 15px;
+                                width: 30px;
                             }
                         }
 
                         button{
                             background-color: white;
                             text-align: center;
+                            padding: 0px;
                         }
 
                         a {
                             text-decoration: none;
                             color:rgb(22, 22, 22);
-                            font-size: 13px;
+                            font-size: 17px;
                             width: auto;
-                            margin-right: 10px;
-
-                            &:hover{
-                                color: $fontHover;
-                            }
                         }
                     }
-                }
-
-               
+                }  
             }
-
         }
     }
 }
@@ -348,8 +342,9 @@ header{
 
             #nav{
                 position: absolute;
-                top: -400%;
+                top: -1000%;
                 width: 100%;
+                height: 100vh;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -371,26 +366,25 @@ header{
                     align-items: center;
                     width: 100%;
 
- 
+                    .nav_logo {
+                        display: none;
+                    
+                    }
 
                     li {
                         list-style-type: none;
                         text-align: center;
                         display: inline-block;
-                        margin: 0 2px;
-                        padding: 15px 0;
-
-                        .nav_logo {
-                            display: none;
-                        
-                        }
+                        margin-bottom: 20px;
+                        padding: 10px 0;
 
                         .menu_cerrar {
                             display: flex;
-                            justify-content: flex-end;
+                            margin-top: 60px;
+                            
                             
                             img{
-                                width: 15px;
+                                width: 30px;
                             }
                         }
 
@@ -403,12 +397,8 @@ header{
                         a {
                             text-decoration: none;
                             color:rgb(22, 22, 22);
-                            font-size: 15px;
+                            font-size: 17px;
                             width: auto;
-
-                            &:hover{
-                                color: $fontHover;
-                            }
                         }
                     }
                 }  
@@ -418,7 +408,166 @@ header{
 }
 
 
-// FALTA ESCRIBIR EL ESTILO DEL POP OVER
+/* MODAL */
+
+.popModal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+
+    .popBoton{
+        z-index: 70;
+        border-radius: 5px;
+
+        .btn{
+            height: 50px;
+            animation-name: popBoton;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-duration: 4s;
+
+            &:hover {
+                color: black;
+            }
+            }
+    }
+
+    .modal-footer{
+
+        button{
+            background-color: $fontHover;
+            color: white;
+            }
+    }
+}
+
+@keyframes popBoton{
+    0%{
+        background-color: white;
+    }
+
+    10%{
+        background-color: white;
+    }
+
+    50%{
+        background-color: $fontHover;
+        padding: 0 100px;
+    }
+
+    90%{
+        background-color: white;
+    }
+
+    100%{
+        background-color: white;
+    }
+}
+
+/* MEDIA QUERY POPOVER */
+
+/* tablet */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+
+    .popModal{
+
+        .popBoton{
+
+            .btn{
+                height: 50px;
+                animation-name: popBotonTablet;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+                animation-duration: 4s;
+    
+                &:hover {
+                    color: black;
+                }
+                }
+        }
+    
+    }
+
+    @keyframes popBotonTablet{
+        0%{
+            background-color: white;
+        }
+    
+        10%{
+            background-color: white;
+        }
+    
+        50%{
+            background-color: $fontHover;
+            padding: 0 85px;
+        }
+    
+        90%{
+            background-color: white;
+        }
+    
+        100%{
+            background-color: white;
+        }
+    }
+}
+
+/* SMARTPHONE */
+@media screen and (max-width: 480px){
+
+    .popModal{
+        height: 150px;
+        margin-top: -60px;
+
+
+        .popBoton{
+            border-radius: 0px;
+
+            .btn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+                height: 100px;
+
+                animation-name: popBotonSmart;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+                animation-duration: 4s;
+
+                p{
+                    width: 200px;
+                    margin-bottom: 0;
+                }
+                }
+        }
+    
+    }
+
+    @keyframes popBotonSmart{
+        0%{
+            background-color: white;
+        }
+    
+        10%{
+            background-color: white;
+        }
+    
+        50%{
+            background-color: $fontHover;
+        }
+    
+        90%{
+            background-color: white;
+        }
+    
+        100%{
+            background-color: white;
+        }
+    }
+}
+
 
 
 
